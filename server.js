@@ -25,7 +25,7 @@ app.get('/notes', (req, res) =>
 // API routes
 app.get('/api/notes', (req, res) => {
     console.info(`GET /api/notes`);
-    res.status(200).json();
+    res.status(200).json(notes);
 })
 
 
