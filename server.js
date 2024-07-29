@@ -59,7 +59,7 @@ app.post('/api/notes', (req, res) => {
       body: newNote,
     };
     
-    console.log(resonse);
+    console.log(response);
     res.status(201).json(response);
   }
   else {
