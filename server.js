@@ -39,15 +39,30 @@ app.post('/api/reviews', (req, res) => {
         text,
         id: uuid(),
       };
-    }
+    
 
     // Convert data to string so we can save it in json format
 
     notes.push(newNote);
-
     const noteString = JSON.stringify(notes);
 
+    // Write string to a file
+    fs.writeFile('./db/db.json', noteString, (err) => {
+      err ? console.log(err)
+      : console.log(`Note has been submitted: ${newNote}`)
+    });
 
+    const response = {
+      status: 'success',
+      body: newNote,
+    };
+    
+    console.log(resonse);
+    res.status(201).json(response);
+  }
+  else {
+    res.status(500).json('Error in posting note');
+  }
 });
 
 
