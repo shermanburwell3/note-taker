@@ -1,2 +1,2 @@
 # note-taker
-An web application for taking notes
+A web application for taking notes
