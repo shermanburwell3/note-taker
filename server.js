@@ -2,6 +2,8 @@ const express = require('express');
 const path = require('path');
 const fs = require('fs');
 
+const { v4: uuid } = require('uuid');
+
 const notes = require('./db/db.json');
 
 const PORT = 3001; // Change later for deployment
@@ -28,7 +30,7 @@ app.get('/api/notes', (req, res) => {
     res.status(200).json(notes);
 });
 
-app.post('/api/reviews', (req, res) => {
+app.post('/api/notes', (req, res) => {
 
   const { title, text } = req.body;
 
