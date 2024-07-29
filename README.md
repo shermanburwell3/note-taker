@@ -20,4 +20,4 @@ DELETE BUTTON CURRENTLY UNAVAILABLE!
 
 ## Credits
 
-All code was highly borrowed from activities provided by Bootcamp Spot Big thanks to my educators!
+All code was highly borrowed from activities provided by Bootcamp Spot. Big thanks to my educators!
