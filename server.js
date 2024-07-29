@@ -6,7 +6,7 @@ const { v4: uuid } = require('uuid');
 
 const notes = require('./db/db.json');
 
-const PORT = 3001; // Change later for deployment
+const PORT = process.env.PORT || 3001; // Change later for deployment
 
 const app = express();
 
